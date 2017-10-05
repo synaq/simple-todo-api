@@ -34,7 +34,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
   todoService.create(req.body).then((response) => {
-    res.json({data: camelize(response.toJSON())});
+    res.status(201).json({data: camelize(response.toJSON())});
   }).catch((err) => {
     next(err);
   })
@@ -66,7 +66,7 @@ router.put('/:todoId', (req, res, next) => {
 
 router.delete('/:todoId', (req, res, next) => {
   todoService.destroy(req.params.todoId).then((response) => {
-    res.json({success: true});
+    res.sendStatus(204);
   }).catch((err) => {
     if (err.message === 'No Rows Deleted') {
       next({statusCode: 404, message: 'Todo with the supplied ID does not exist'});
