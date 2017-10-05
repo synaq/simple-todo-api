@@ -4,5 +4,8 @@ node_modules
 # compiled ES5 code #
 dist
 
+# configuration file #
+config.json
+
 # logs #
 *.log
