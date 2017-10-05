@@ -6,9 +6,10 @@ module.exports = {
     client: config.db.client,
     connection: config.db.connection,
     pool: {
-      min: 2,
-      max: 10
+      min: 1,
+      max: 1
     },
+    "useNullAsDefault": true,
     migrations: {
       tableName: 'knex_migrations'
     }
