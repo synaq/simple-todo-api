@@ -3,6 +3,26 @@ A simple api with basic CRUD operations for ToDo applications.
 
 https://todo-simple-api.herokuapp.com/
 
+## Quick start
+For a quick, ready made development and testing environment, you can build
+a Docker image from the included Dockerfile and run a minimal service implementation
+in a Docker container.
+
+#### Build image
+```
+docker build -t simple-todo-api .
+```
+
+#### Run a minimal service in a local container, bound to port 4444
+```
+docker run --rm --name simple-todo -p 4444:4444 -d simple-todo-api
+```
+
+#### Access the minimal service with this URL:
+```
+http://localhost:4444/todos
+```
+
 ## API Reference
 
 #### Method: GET
