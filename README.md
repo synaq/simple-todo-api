@@ -29,6 +29,8 @@ https://todo-simple-api.herokuapp.com/
         ]
     }
  ```
+ ###### Status Codes
+ * 200 - Todos successfully returned
  
 ###### Path /todos/:todoId - Fetch todo by id
  
@@ -43,6 +45,10 @@ https://todo-simple-api.herokuapp.com/
         }
     }
  ```
+  ###### Status Codes
+ * 200 - Todo successfully returned
+ * 404 - Todo with the supplied ID does not exist
+
 #### Method: POST
 
 ###### Path :/todos - Create new ToDo
@@ -61,7 +67,8 @@ https://todo-simple-api.herokuapp.com/
         }
     }
 ```
- 
+  ###### Status Codes
+ * 201 - Todo successfully created
 
 #### METHOD: PUT
 
@@ -73,6 +80,9 @@ https://todo-simple-api.herokuapp.com/
         "isComplete": true
     }
 ```
+  ###### Status Codes
+ * 200 - Todo successfully updated
+ * 404 - Todo with the supplied ID does not exist
 
 #### Method: DELETE
 
@@ -81,6 +91,9 @@ https://todo-simple-api.herokuapp.com/
     response = {
         "success": true
     }
-```           
+```     
+  ###### Status Codes
+ * 204 - Todo successfully deleted
+ * 404 - Todo with the supplied ID does not exist     
  
  
