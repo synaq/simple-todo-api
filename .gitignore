@@ -9,3 +9,6 @@ config.json
 
 # logs #
 *.log
+
+# IDE stuff
+.idea
