@@ -1,5 +1,5 @@
 FROM node:latest
-RUN apt-get update && apt-get install -y sqlite3 libsqlite3-dev jq
+RUN apt-get update && apt-get install -y sqlite3 libsqlite3-dev jq curl
 WORKDIR /app
 RUN sqlite3 todos.db
 COPY package.json .
